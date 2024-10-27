@@ -1,0 +1,60 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 3rem;
+    width: 100%; /* Занимает всю ширину */
+}
+
+.navList li {
+    position: relative; /* Добавлено для псевдоэлементов */
+}
+
+.navList li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navList li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition:
+        width 0.3s ease,
+        left 0.3s ease;
+}
+
+.navList li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Добавьте правило для "Увійти" */
+.login {
+    margin-left: auto; /* Выравнивает элемент вправо */
+    margin-left: 470px;
+}
+
+.login a {
+    color: #6cba4c; /* Можно настроить цвет для кнопки "Увійти" */
+}
