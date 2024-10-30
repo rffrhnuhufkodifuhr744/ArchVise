@@ -20,7 +20,7 @@ const AppLogin = () => {
                     <div class={styles.pass}>Forgot Password?</div>
                     <input type="submit" value="Login" />
                     <div class={styles.signupLink}>
-                        Not a member ? <a href="#">Sign up</a>
+                        Not a member? <a href="#">Sign up</a>
                     </div>
                 </form>
             </div>
