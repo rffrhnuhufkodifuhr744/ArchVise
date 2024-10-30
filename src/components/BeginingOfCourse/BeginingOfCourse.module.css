@@ -5,14 +5,14 @@
 }
 
 .infoContainer {
-    max-width: 700px; /* Ограничение ширины для удобства чтения */
+    max-width: 700px;
     font-size: 18px;
-    margin: 20px 0 20px 40px; /* Сдвинуть контейнер влево */
-    padding: 20px; /* Внутренний отступ */
-    line-height: 1.6; /* Интервал между строками для удобства чтения */
-    background-color: #f9f9f9; /* Легкий фон для выделения контейнера */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень для объема */
+    margin: 20px 0 20px 40px;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .shortList {
@@ -21,12 +21,11 @@
 }
 
 .shortListInfo {
-    margin-top: 20px; /* Отступ сверху для блока с информацией */
+    margin-top: 20px;
 }
 
-/* Новые стили для абзацев */
 p {
-    margin-bottom: 20px; /* Отступ снизу для абзацев */
+    margin-bottom: 20px;
 }
 
 .hotKeys {
