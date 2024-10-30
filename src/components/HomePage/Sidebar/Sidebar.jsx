@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
@@ -7,22 +7,22 @@ const Sidebar = () => {
         <nav className={styles.sidebar}>
             <ul className={styles.navList}>
                 <li>
-                    <a href="/">Головна</a>
+                    <Link to="/">Головна</Link>
                 </li>
                 <li>
-                    <a href="/about">Про нас</a>
+                    <Link to="/about">Про нас</Link>
                 </li>
                 <li>
-                    <a href="/templates">Шаблони та приклади</a>
+                    <Link to="/templates">Шаблони та приклади</Link>
                 </li>
                 <li>
-                    <a href="/resources">Ресурси для навчання</a>
+                    <Link to="/resources">Ресурси для навчання</Link>
                 </li>
                 <li>
-                    <a href="/contacts">Контакти</a>
+                    <Link to="/contacts">Контакти</Link>
                 </li>
                 <li className={styles.login}>
-                    <a href="/login">Увійти</a>
+                    <Link to="/login">Увійти</Link>
                 </li>
             </ul>
         </nav>

@@ -17,11 +17,11 @@
     padding: 0;
     margin: 0;
     gap: 3rem;
-    width: 100%; /* Занимает всю ширину */
+    width: 100%;
 }
 
 .navList li {
-    position: relative; /* Добавлено для псевдоэлементов */
+    position: relative;
 }
 
 .navList li a {
@@ -49,12 +49,11 @@
     left: 0;
 }
 
-/* Добавьте правило для "Увійти" */
 .login {
-    margin-left: auto; /* Выравнивает элемент вправо */
+    margin-left: auto;
     margin-left: 470px;
 }
 
 .login a {
-    color: #6cba4c; /* Можно настроить цвет для кнопки "Увійти" */
+    color: #6cba4c;
 }

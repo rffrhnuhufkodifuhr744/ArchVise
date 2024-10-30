@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './homePage.module.css';
 import Sidebar from './Sidebar/Sidebar';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -18,9 +19,9 @@ const HomePage = () => {
                     <span>без професійних навичок</span>
                 </p>
                 <div className={styles.buttons}>
-                    <a href="/start" className={styles.startBtn}>
+                    <Link to="/start" className={styles.startBtn}>
                         Старт
-                    </a>
+                    </Link>
                 </div>
                 <div className={styles.arrowDown}>
                     <a href="/aboutAV">

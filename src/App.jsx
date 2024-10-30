@@ -1,22 +1,23 @@
 import React from 'react';
-import { Link,Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+
+import AppRoutes from '../routes';
 
 // import resizeHook from '@hooks/resize';
 import styles from './App.module.css';
 import AppContactsUs from './components/AppContactsUs/AppContactsUs';
 import HomePage from './components/HomePage/HomePage';
+import Sidebar from './components/HomePage/Sidebar/Sidebar';
 // import * as styles from './App.css';
 
 const App = () => {
     return (
-        <div className="main">
-            <HomePage />
-            <Routes>
-                <Route path="/contacts" element={<AppContactsUs />} />
-            </Routes>
-        </div>
+        <BrowserRouter>
+            <div className={styles.main}>
+                <AppRoutes />
+            </div>
+        </BrowserRouter>
     );
 };
 
-// export { App };
 export default App;
