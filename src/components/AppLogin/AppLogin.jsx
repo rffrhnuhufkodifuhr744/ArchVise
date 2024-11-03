@@ -1,38 +1,16 @@
 import React, { useState } from 'react';
 import styles from './AppLogin.module.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import useLogin from './useLogin';
 
 const AppLogin = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Для перенаправления после успешного входа
+    const { login, loading, error } = useLogin();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // Предотвращаем стандартное поведение формы
-
-        try {
-            const response = await fetch('http://localhost:5000/login', {
-                // Укажите свой бэкенд домен
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }), // Отправляем данные пользователя
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Login successful:', data);
-                navigate('/'); // Перенаправление на главную страницу или другую страницу
-            } else {
-                const errorText = await response.text();
-                console.error('Login failed:', errorText);
-                alert('Login failed: ' + errorText); // Уведомление пользователя об ошибке
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-            alert('An error occurred: ' + error.message); // Обработка ошибок
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        login(username, password); // хук для логіна
     };
 
     return (
@@ -56,7 +34,8 @@ const AppLogin = () => {
                         <label>Password</label>
                     </div>
                     <div className={styles.pass}>Forgot Password?</div>
-                    <input type="submit" value="Login" />
+                    <input type="submit" value="Login" disabled={loading} />
+                    {error && <div className={styles.error}>{error}</div>}
                     <div className={styles.signupLink}>
                         Not a member? <Link to="/signup">Sign up</Link>
                     </div>

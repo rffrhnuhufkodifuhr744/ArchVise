@@ -15,47 +15,73 @@
     position: absolute;
     top: 20px;
     color: white;
-    font-size: 2.1rem;
+    font-size: 2.5rem; /* Увеличен размер шрифта */
     font-weight: bold;
-}
-
-.h2-logo {
-    position: absolute;
-    top: 250px;
-    color: black;
-    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Добавлен теневой эффект */
 }
 
 .archQuest {
     position: absolute;
     color: #666666;
-    max-width: 30%;
-    font-family: initial;
-    margin-left: 190px;
+    max-width: 35%; /* Увеличена ширина блока */
+    font-family: 'Arial', sans-serif; /* Изменён шрифт */
+    margin-left: 20px; /* Уменьшено расстояние слева */
     bottom: 20px;
-    font-size: 17px;
+    font-size: 18px; /* Увеличен размер шрифта */
 }
 
 .haveQst {
-    font-size: 22px;
+    font-size: 24px; /* Увеличен размер шрифта заголовка */
+    font-weight: bold; /* Сделан жирным */
+    margin-bottom: 10px; /* Добавлено отступ */
+}
+
+.infoText {
+    line-height: 1.6; /* Увеличено межстрочное расстояние */
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between; /* Выравнивание офисных блоков */
+    margin-top: 20px; /* Добавлено отступ */
+}
+
+.officeBlock {
+    flex: 1; /* Равномерное распределение пространства между офисами */
+    margin-right: 20px; /* Добавлено расстояние между офисами */
+}
+
+.officeBlock:last-child {
+    margin-right: 0; /* Удалено отступ для последнего элемента */
+}
+
+.officeTitle {
+    font-size: 20px; /* Увеличен размер шрифта для заголовков офисов */
+    font-weight: bold; /* Сделан жирным */
+}
+
+.officeAddress,
+.officePhone,
+.officeEmail {
+    margin: 5px 0; /* Добавлены отступы между строками */
 }
 
 .contactForm {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Увеличен радиус скругления */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Увеличена тень */
     right: 100px;
     bottom: 0;
 }
 
 .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Увеличены отступы между полями формы */
 }
 
 label {
-    font-size: 14px;
+    font-size: 16px; /* Увеличен размер шрифта для меток */
     font-weight: bold;
     color: #333;
     display: block;
@@ -65,7 +91,7 @@ label {
 input[type='email'],
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Увеличены отступы внутри инпутов */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
@@ -73,14 +99,14 @@ textarea {
 }
 
 textarea {
-    height: 100px;
+    height: 120px; /* Увеличена высота текстовой области */
     resize: none;
 }
 
 .submitButton {
     background-color: #4caf50;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Увеличены отступы кнопки */
     border: none;
     border-radius: 4px;
     font-size: 16px;

@@ -1,36 +1,16 @@
 import React, { useState } from 'react';
 import styles from './SignUpPage.module.css';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+import useSignUp from './useSignUp';
 
 const SignUpPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [message, setMessage] = useState('');
-    const navigate = useNavigate(); // Хук для перенаправлення на мейн сторінку
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // Запобігаємо перезавантаженню сторінки
-        setMessage(''); // Скидаємо попереднє повідомлення
+    const { signUp, message, loading } = useSignUp();
 
-        try {
-            const response = await axios.post('http://localhost:5000/signup', {
-                username,
-                password,
-            });
-
-            if (response.status === 201) {
-                setMessage('Ви успішно зареєстровані!');
-                setTimeout(() => {
-                    navigate('/'); // Перенаправляємо на мейн пейдж
-                }, 2000); // Чекаємо 2с перед перенаправленням
-            }
-        } catch (error) {
-            if (error.response && error.response.status === 400) {
-                setMessage("Користувач уже існує. Будь ласка, виберіть інше ім'я.");
-            } else {
-                setMessage('Сталася помилка. Спробуйте ще раз пізніше.');
-            }
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        signUp(username, password);
     };
 
     return (
@@ -60,8 +40,8 @@ const SignUpPage = () => {
                         <span></span>
                         <label>Password</label>
                     </div>
-                    <input type="submit" value="Sign up" name="signup" />
-                    {message && <p className={styles.message}>{message}</p>} {/* Відображення повідомлення */}
+                    <input type="submit" value="Sign up" name="signup" disabled={loading} />
+                    {message && <p className={styles.message}>{message}</p>}
                     <div className={styles.signupLink}>
                         Are you a member? <Link to="/login">Login</Link>
                     </div>

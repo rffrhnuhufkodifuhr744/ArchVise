@@ -25,7 +25,7 @@ const AppHeader = () => {
                     <Link to="/">Головна</Link>
                 </li>
                 <li>
-                    <Link to="/aboutAV">Про нас</Link>
+                    <Link to="/about">Про нас</Link>
                 </li>
                 <li>
                     <Link to="/examples">Шаблони та приклади</Link>

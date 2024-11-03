@@ -23,11 +23,11 @@ const HomePage = () => {
                         Старт
                     </Link>
                 </div>
-                <div className={styles.arrowDown}>
+                {/* <div className={styles.arrowDown}>
                     <a href="/aboutAV">
                         <img src="/img/white-down-arrow-png-2.png" alt="Стрілка вниз" />
                     </a>
-                </div>
+                </div> */}
             </div>
         </div>
     );
