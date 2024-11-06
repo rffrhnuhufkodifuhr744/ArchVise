@@ -18,7 +18,6 @@ const AppContactsUs = () => {
                     <div className={styles.officeBlock}>
                         <h4>ТОВ ArchVis Studio</h4>
                         <p>Ukraine, Uzhorod</p>
-                        <p>ejjekrj</p>
                     </div>
                     <div className={styles.officeBlock}>
                         <h4>Development office</h4>
